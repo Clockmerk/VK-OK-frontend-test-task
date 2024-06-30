@@ -30,3 +30,5 @@ npm run storybook
 - TS
 - Stylus
 - Storybook
+- Jest
+- react-testing-library
