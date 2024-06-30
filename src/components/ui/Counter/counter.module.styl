@@ -1,0 +1,115 @@
+mainColor = rgb(2, 190, 2)
+secondColor = rgb(197, 197, 197)
+
+.containter 
+  width fit-content
+  display: flex
+  justify-content: center
+  align-items: center
+  
+  .counter 
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius 50%
+    border:none
+    z-index 1
+    text-align: center
+  label 
+    z-index 1
+    font-weight normal
+  
+  .pulse 
+    position absolute
+    border-radius: 50%
+    opacity 0.5
+    z-index 0
+    animation: pulse 2s infinite;
+
+  &.stroke 
+    .counter 
+      border:solid 
+
+&.primary 
+   .counter, .pulse  
+    background:  mainColor
+    border-color mainColor
+    color white
+  
+&.secondary 
+  .counter, .pulse 
+    background:  secondColor
+    border-color secondColor
+    color black
+   
+&.8 
+  h = 8px
+  .counter 
+    min-height: h;
+    min-width: h;
+    border-width: 1px
+  
+  .pulse 
+    height: h
+    width: h
+
+&.12
+  h = 12px
+  .counter 
+    min-height: h;
+    min-width: h;
+    border-width: 2px;
+  
+  .pulse 
+    height: h
+    width: h
+  
+&.16 
+  h = 16px
+  .counter
+    padding: 0 4px;
+    min-height h;
+    min-width h
+    border-width: 2px;
+  
+  .pulse 
+    height: h
+    width: h
+
+&.20 
+  h = 20px
+  .counter 
+    padding: 0 4px;
+    min-height h;
+    min-width: h
+    border-width: 2px;
+  
+  .pulse 
+    height: h
+    width: h
+  
+&.24 
+  h = 24px
+  .counter 
+    padding: 0 6px;
+    min-height h = 24px;
+    min-width: h
+    border-width: 3px;
+  
+  .pulse 
+    height: h
+    width: h
+  
+@keyframes pulse 
+  0% 
+    transform: scale(1);
+  
+  50% 
+    transform: scale(2);
+  
+  100% 
+    transform: scale(1);
+  
+
+
+
